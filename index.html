@@ -2,61 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Bhanu Shakya">
-  <title>Bhanu Shakya - Portfolio</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Bhanu Shakya" />
+  <title>Bhanu Shakya | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <style>
+    :root {
+      --primary: #6c63ff;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --card-bg: #1e1e1e;
+      --hover-bg: #292929;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffe8d6;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     .hero {
-      background-color: #cb997e;
-      color: #fff;
-      padding: 50px 0;
+      background-color: #171717;
+      padding: 60px 0;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .hero p.lead {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     .section-title {
-      border-bottom: 2px solid #cb997e;
+      border-bottom: 2px solid var(--primary);
       display: inline-block;
-      margin-bottom: 20px;
-      color: #cb997e;
+      margin-bottom: 25px;
+      color: var(--light);
+      padding-bottom: 6px;
+      font-size: 1.8rem;
+      font-weight: 500;
     }
 
     .contact-icons a {
-      color: #000000;
-      text-decoration: none;
+      color: var(--light);
+      font-size: 1.2rem;
+      margin: 0 12px;
+      transition: all 0.3s ease;
     }
 
     .contact-icons a:hover {
-      color: #333;
+      color: var(--primary);
+      transform: scale(1.1);
     }
 
-    .project-card {
-      border-left: 5px solid #cb997e;
-      background-color: #fff;
-      border-radius: 5px;
+    .project-card,
+    .exp-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      border-left: 4px solid var(--primary);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
-    .tech-logo {
-      width: 25px;
-      margin-right: 5px;
+    .project-card:hover,
+    .exp-card:hover {
+      background-color: var(--hover-bg);
+    }
+
+    .tech-badge {
+      background-color: var(--dark);
+      color: var(--light);
+      border: 1px solid var(--primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin: 3px 5px 0 0;
+      display: inline-block;
     }
 
     footer {
-      background-color: #cb997e;
+      background-color: #171717;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-icons img {
+      width: 18px;
+      height: 18px;
+      filter: invert(1);
+      margin: 0 8px;
+    }
+
+    .btn-outline-light {
+      border-radius: 20px;
+      padding: 4px 12px;
     }
   </style>
 </head>
@@ -65,112 +113,109 @@
   <header class="hero text-center">
     <div class="container">
       <h1>Bhanu Shakya</h1>
-      <p class="lead">Software Engineer | MERN Stack Developer | React Native Enthusiast 🚀</p>
-      <div class="contact-icons d-flex justify-content-center gap-3">
-        <a href="mailto:work.bhanu2004@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/bhanu-shakya-081a8a212" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/bhanushakya2004" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://leetcode.com/u/Bhanu_Shakya/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 20px; height: 20px;"> LeetCode
-        </a>
-        <a href="https://www.naukri.com/code360/profile/9561744f-8309-4ca1-bf2c-09bbace80338" target="_blank">
-          <img src="https://files.codingninjas.in/ps-explore-home-address-11258.svg" alt="LeetCode" style="width: 20px; height: 20px;"> Code 360
+      <p class="lead">Software Engineer | MERN Stack Developer | React Native Specialist</p>
+      <div class="contact-icons d-flex justify-content-center mb-4">
+        <a href="mailto:work.bhanu2004@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/bhanu-shakya-081a8a212" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/bhanushakya2004" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Bhanu_Shakya/" target="_blank" title="LeetCode">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" />
         </a>
       </div>
+      <p class="mx-auto" style="max-width: 700px;">
+        B.Tech Computer Science student at Poornima University with a CGPA above 8. Passionate about building scalable software solutions using the MERN stack and React Native. Finalist at Smart India Hackathon 2024. Enthusiastic about AI integrations and automation.
+      </p>
     </div>
   </header>
 
-  <main class="container my-5">
-    <section id="summary">
-      <h2 class="section-title">Professional Summary 📝</h2>
-      <p>
-        B.Tech Computer Science student with a CGPA above 8 at Poornima University. Skilled in MERN stack, React Native, and API development, with a strong foundation in core CS concepts like DSA (C++) and OOP. Hackathon finalist at Smart India Hackathon 2024. Experienced in building scalable applications using Firebase. Seeking internships to apply technical expertise and contribute to impactful projects.
-      </p>
-    </section>
-
-    <section id="skills" class="mt-5">
-      <h2 class="section-title">Technical Skills 💻</h2>
-      <ul class="list-unstyled row">
-        <li class="col-md-6"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/javascript.svg" class="tech-logo" alt="JavaScript Logo"> <strong>Programming Languages:</strong> JavaScript, C++, Python</li>
-        <li class="col-md-6"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg" class="tech-logo" alt="React Logo"> <strong>Web Development:</strong> React, HTML, CSS, REST APIs</li>
-        <li class="col-md-6"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg" class="tech-logo" alt="React Native Logo"> <strong>Mobile Development:</strong> React Native, Firebase</li>
-        <li class="col-md-6"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mongodb.svg" class="tech-logo" alt="MongoDB Logo"> <strong>Databases:</strong> MongoDB, MySQL</li>
-        <li class="col-md-6"><i class="fas fa-cogs"></i> <strong>Core Competencies:</strong> Data Structures & Algorithms, OOP, DBMS</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="mt-5">
-      <h2 class="section-title">Experience 📂</h2>
-      <div class="project-card p-3 mb-4">
-    <h4 class="fw-bold">App Developer</h4>
-    <p><em><a href="https://github.com/bhanushakya2004/Smart-India-Hackathon-Project" target="_blank">Smart India Hackathon 2024 (Finalist)</a> - IIT Hyderabad </a></em></p>
-    <ul>
-        <li>Developed a comprehensive ecosystem, "Krashaksetu," consisting of two mobile apps (one for farmers and one for customers) and a website serving as a kiosk portal, all interconnected through Firebase as the central database.</li>
-        <li>Designed and built the full customer app, enabling users to browse and purchase crops directly from farmers, ensuring a direct and cost-effective connection.</li>
-        <li>Integrated real-time notifications and AI-powered crop price prediction to assist customers in making informed purchasing decisions.</li>
-        <li>Deployed an AI model for crop price prediction, allowing customers to view future crop prices and plan their purchases accordingly.</li>
-        <li>Gathered valuable data on farmers' real-life challenges, conducting research to address these issues through the ecosystem and improve their business operations.</li>
-        <li>Focused on delivering a seamless user experience in the customer app while ensuring that backend integrations with Firebase enabled smooth data sharing and management across all platforms.</li>
-    </ul>
-</div>
-
-     <div class="project-card p-3 mb-4">
-      <h4 class="fw-bold">Web Developer</h4>
-      <p><em>Rajasthan Police Hackathon (Finalist) - Jaipur</em></p>
-      <ul>
-          <li>Developed a Police Feedback System using React for the frontend, Express and Node.js for the backend, and MongoDB to store feedback data.</li>
-          <li>Integrated OAuth for secure and seamless authentication, ensuring data privacy and user trust.</li>
-          <li>Utilized Azure's free NLP (Natural Language Processing) service to process feedback and analyze emotions, categorizing feedback as 'Happy', 'Sad', 'Informative', etc., for better insights.</li>
-          <li>Designed and deployed a Node.js API on Replit for real-time feedback fetching, NLP processing, and storing feedback in MongoDB.</li>
-          <li>Optimized the feedback system for performance, enhancing user experience and ensuring scalability for future updates and improvements.</li>
-      </ul>
-  </div>
-    </section>
-
-    <section id="education" class="mt-5">
-      <h2 class="section-title">Education 🎓</h2>
-      <ul class="list-unstyled">
-        <li><strong>B.Tech in Computer Science:</strong> Poornima University, Jaipur (CGPA: 8.0, Expected Graduation: June 2026)</li>
-        <li><strong>Senior Secondary (12th):</strong> St. Paul’s Sr. Sec. School, Banswara (80%, June 2022)</li>
-      </ul>
-    </section>
-
-    <section id="certifications" class="mt-5">
-      <h2 class="section-title">Certifications 📜</h2>
-      <ul>
-        <li>OOP in C++: Mastered object-oriented programming concepts.</li>
-        <li>MongoDB Atlas: Practical experience in cloud database management.</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="mt-5">
-      <h2 class="section-title">Projects 🚀</h2>
-      <div class="project-card p-3 mb-4">
-        <h4 class="fw-bold">Krashaksetu Customer App</h4>
-        <p>React Native | Oct 2024–Dec 2024</p>
+  <main class="container py-5">
+    <section id="experience">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="exp-card">
+        <h4>Full Stack Development Intern</h4>
+        <p><em>Startbit Solutions | June 2024 - August 2024</em></p>
+        <p>Worked on real-world web applications as part of an agile team. Responsible for front-end development, back-end API integration, and database management. Played a key role in improving performance and ensuring security in production-ready apps.</p>
         <ul>
-        <li>Developed a React Native app using Expo to enable users to buy fresh crops directly from farmers, eliminating middlemen and reducing costs by 25%.</li>
-        <li>Utilized Expo Router for seamless navigation and integrated Expo Notifications to enhance user experience with real-time updates.</li>
-        <li>Implemented Firebase as Backend-as-a-Service (BaaS) for database management, authentication, and cloud storage.</li>
-        <li>Integrated Google Authentication for secure and easy user login.</li>
-        <li>Worked on a crop future price prediction AI model using TensorFlow and a custom prediction algorithm to assist buyers in decision-making.</li>
-        <li>Deployed the AI model API on Replit cloud, making the prediction API live and accessible in real-time.</li>
-        <li>Focused on delivering a user-friendly interface while ensuring efficient backend integration for scalability and reliability.</li>
+          <li>Built and optimized full-stack apps using React.js and Node.js</li>
+          <li>Reduced average API response time by 40% with query optimization</li>
+          <li>Integrated JWT-based authentication with OAuth2 for user sessions</li>
+          <li>Designed scalable MongoDB schemas for efficient data handling</li>
         </ul>
+        <div class="mt-2">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">Express</span>
+        </div>
       </div>
     </section>
 
-    <section id="achievements" class="mt-5">
-      <h2 class="section-title">Achievements 🏆</h2>
-      <ul>
-        <li>Finalist, Smart India Hackathon 2024: Developed an app to connect farmers and buyers.</li>
-        <li>Finalist, Rajasthan Police Hackathon 2023: Delivered secure web solutions.</li>
-      </ul>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-card">
+        <h4>ThinkPal AI</h4>
+        <p><em>Feb 2025 - Mar 2025</em></p>
+        <p>ThinkPal AI is a productivity-focused assistant that leverages LLMs to generate structured, personalized notes from user prompts. Designed to help students and professionals save hours of manual work by automating content curation.</p>
+        <div class="mt-2">
+          <span class="tech-badge">AI</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Firebase</span>
+        </div>
+        <div class="mt-2">
+          <a href="https://github.com/anshul-jain-devx108/ThinkPal--AI" target="_blank" class="btn btn-sm btn-outline-light">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>Krashak Setu - Agri-Tech Ecosystem</h4>
+        <p><em>Oct 2024 - Dec 2024</em></p>
+        <p>Designed during the Smart India Hackathon 2024, Krashak Setu enables farmers to sell directly to consumers via a multilingual mobile-first platform. Integrated supply chain tracking and market analytics to empower agriculture.</p>
+        <div class="mt-2">
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Firebase</span>
+        </div>
+        <div class="mt-2">
+          <a href="https://github.com/bhanushakya2004/Smart-India-Hackathon-Project" target="_blank" class="btn btn-sm btn-outline-light">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h4>LearnSphere - AI-Powered Educational Platform</h4>
+        <p><em>2024 | Ongoing</em></p>
+        <p>LearnSphere is an interactive learning platform that adapts content based on user skill level using Gemini LLM APIs. Includes performance tracking, real-time quizzes, and intelligent recommendations.</p>
+        <div class="mt-2">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">MongoDB</span>
+        </div>
+        <div class="mt-2">
+          <a href="https://github.com/anshul-jain-devx108/LearnSphere---AI-Powered-Educational-Platform-" target="_blank" class="btn btn-sm btn-outline-light">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="text-white py-3 text-center">
-    <p>&copy; 2025 Bhanu Shakya. All Rights Reserved.</p>
+  <footer class="text-center">
+    <div class="container">
+      <div class="footer-icons mb-2">
+        <a href="mailto:work.bhanu2004@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/bhanu-shakya-081a8a212" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/bhanushakya2004" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Bhanu_Shakya/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" />
+        </a>
+      </div>
+      <p class="mb-0">&copy; 2025 Bhanu Shakya. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
